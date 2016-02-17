@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ahorcado</title>
+	<script type="text/javascript" src="ahorcado.js"></script>
+	<style type="text/css">
+		body {
+			font: normal 18px Verdana;
+			text-align: center;
+		}
+		.resultado div {
+			font: bold 0px Verdana;
+			position: absolute;
+			top:270px;
+			left: 0;
+			right: 0;
+
+		}
+		#ganar {
+			color: green;
+		}
+		#perder {
+			color: red;
+		}
+		.final {
+			animation: emerge 3s;
+			margin: 0 auto;
+		}
+		@keyframes emerge {
+			  0% {
+			    font-size: 0px;
+			  }
+			  50% {
+			    font-size: 44px;
+			  100% {
+			    font-size: 58px;
+  }
+
+
+		}
+	</style>
+</head>
+<body>
+	<h1>¡Juega al ahorcado!</h1>
+	
+	<p>
+		Elige una letra:
+
+		<input type="text" id="letra" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('boton').click()" />
+		<input type="button" id="boton" value="Boom!"/>
+	</p>	
+	<h2 id="pista">_ _ _ _ _ _ _ _</h2>
+	<canvas id="c"></canvas>
+	<div class="resultado">
+		<div id="ganar">Ganaste!</div>
+		<div id="perder">Perdiste!</div>
+	</div>
+	<script type="text/javascript">
+ 		iniciar();
+	</script>
+</body>
+</html>
