@@ -37,7 +37,74 @@ var muerto = {
 };
 
 //Array de palabras
-palabras = ["mastodonte", "yerno", "ciudadela", "hojalata", "camello", "chispa", "pendenciera", "ilustre", "magico", "eternidad"]
+palabras = [
+	"sexy",
+	"dead",
+	"room",
+	"asteroide",
+	"universo",
+	"conspirador",
+	"electricidad",
+	"hielo",
+	"blade",
+	"Luci",
+	"panoramas",
+	"blade",
+	"venus",
+	"azul",
+	"final",
+	"renacer",
+	"magia",
+	"temor",
+	"temblor",
+	"oropel",
+	"vinyl",
+	"corazon",
+	"atomico",
+	"nitro",
+	"nunca",
+	"paula",
+	"human",
+	"space",
+	"volt",
+	"paz",
+	"sombras",
+	"destruyas",
+	"labios",
+	"rotos",
+	"infinito",
+	"love",
+	"luna",
+	"nada",
+	"nunca",
+	"besame",
+	"semana",
+	"ciudades",
+	"invisibles",
+	"game",
+	"over",
+	"andromeda",
+	"altamar",
+	"resiste",
+	"nendertal",
+	"fantasma",
+	"babilonia",
+	"peace",
+	"fotosintesis",
+	"polar",
+	"rocanlover",
+	"whatever",
+	"mars",
+	"soñe",
+	"morning",
+	"watts",
+	"random",
+	"time",
+	"haze",
+	"girl",
+	"tarantula",
+	"veneno"
+	]
 
 
 var Ahorcado = function(con) {
@@ -115,9 +182,9 @@ Ahorcado.prototype.trazar = function () {
 				if (perdio) {
 					perdio.className = 'final'
 
-					setTimeout(function(){iniciar();}, 5000); 
+					setTimeout(function(){iniciar();}, 5000);
 				}
-				
+
 	}
 	this.dibujar();
 }
@@ -212,7 +279,7 @@ Ahorcado.prototype.ganar = function() {
 				if (gano) {
 					gano.className = 'final'
 				}
-				setTimeout(function(){iniciar();}, 5000); 
+				setTimeout(function(){iniciar();}, 5000);
 			};
 	 	}
 	}
