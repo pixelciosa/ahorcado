@@ -25,7 +25,7 @@ body.is-fixed {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 @media (max-width: 1020px) {
@@ -46,6 +46,12 @@ body.is-fixed {
   padding-top: 19px;
 }
 
+@media (max-width: 1020px) {
+  .sidebar {
+    margin-right: 0;
+  }
+}
+
 .title {
   font-family: 'Luckiest Guy', cursive;
   font-size: 65px;
@@ -54,10 +60,22 @@ body.is-fixed {
   margin: 0 0 3px 0;
 }
 
+@media (max-width: 767px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
 .subtitle {
   font-family: 'Amatic SC', cursive;
   font-size: 26px;
   margin: 0 0 30px 0;
+}
+
+@media (max-width: 767px) {
+  .subtitle {
+    font-size: 19px;
+  }
 }
 
 p {
@@ -153,6 +171,7 @@ button:focus {
 }
 
 canvas {
+  width: 100%;
   border: 4px dotted white;
   border-radius: 10px;
 }
