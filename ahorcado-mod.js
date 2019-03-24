@@ -120,6 +120,7 @@ Ahorcado.prototype.trazar = function () {
 }
 
 function iniciar () {
+	
 	var canvas = document.getElementById("c");
 	canvas.width = 600;
 	canvas.height = 600;

@@ -1,33 +1,158 @@
-body {
-  font: normal 18px Verdana;
-  text-align: center;
+html {
+  --primary: #3c9087;
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  background-color: var(--primary);
+  background-image: url('images/madera.png');
+  background-repeat: repeat;
+  margin: 0;
+}
+ 
+body.is-fixed {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sidebar {
+  margin-right: 50px;
+  padding-top: 19px;
+}
+
+.title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 65px;
+  letter-spacing: 1px;
+  line-height: 0.5;
+  margin: 0 0 3px 0;
+}
+
+.subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+  margin: 0 0 30px 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
 .resultado div {
-  font: bold 0px Verdana;
+  opacity: 0;
+  background-color: rgba(194, 92, 92, 0.2);
+  pointer-events: none;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 50px;
   position: absolute;
-  top:270px;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 #ganar {
-  color: green;
+  background-color: rgb(20, 101, 20, 0.5);
 }
+
 #perder {
-  color: red;
+  background-color: rgb(193, 66, 66, 0.5);
 }
+
 .final {
   animation: emerge 3s;
   margin: 0 auto;
 }
 
+.input {
+  padding: 20px;
+  display: inline-block;
+  border: 4px dotted white;
+  border-radius: 10px;
+}
+
+.input p {
+  display: block;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 0;
+  border-bottom: 4px solid white;  outline: 0;
+  padding: 20px;
+  width: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding-left: 20px;
+  text-transform: uppercase;
+  transition: background-color 200ms ease-in-out;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+button {
+  height: 67px;
+  vertical-align: bottom;
+  border: 0;
+  background-color: #90C2E7;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  margin-left: -3px;
+  outline: 0;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(125, 171, 206);
+}
+
+canvas {
+  border: 4px dotted white;
+  border-radius: 10px;
+}
+
+footer a:hover {
+  transform: scale(1.1);
+}
+
 @keyframes emerge {
-    0% {
-      font-size: 0px;
-    }
-    50% {
-      font-size: 44px;
-    }
-    100% {
-      font-size: 58px;
-    }
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 58px;
+  }
 }
