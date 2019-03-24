@@ -25,6 +25,20 @@ body.is-fixed {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 40px 0;
+}
+
+@media (max-width: 1020px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-height: 660px) {
+  .container {
+    height: auto;
+  }
 }
 
 .sidebar {
@@ -128,6 +142,7 @@ button {
   font-style: italic;
   margin-left: -3px;
   outline: 0;
+  padding: 0px 10px;
   cursor: pointer;
   transition: background-color 300ms ease-in-out;
 }
