@@ -46,6 +46,7 @@ palabras = [
 	"conspirador",
 	"electricidad",
 	"hielo",
+	"fuego",
 	"blade",
 	"Luci",
 	"panoramas",
