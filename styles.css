@@ -1,0 +1,33 @@
+body {
+  font: normal 18px Verdana;
+  text-align: center;
+}
+.resultado div {
+  font: bold 0px Verdana;
+  position: absolute;
+  top:270px;
+  left: 0;
+  right: 0;
+}
+#ganar {
+  color: green;
+}
+#perder {
+  color: red;
+}
+.final {
+  animation: emerge 3s;
+  margin: 0 auto;
+}
+
+@keyframes emerge {
+    0% {
+      font-size: 0px;
+    }
+    50% {
+      font-size: 44px;
+    }
+    100% {
+      font-size: 58px;
+    }
+}
