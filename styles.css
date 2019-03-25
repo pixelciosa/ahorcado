@@ -198,11 +198,6 @@ canvas {
   border-radius: 10px;
 }
 
-footer a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 @-webkit-keyframes emerge {
   0% {
     opacity: 0;
