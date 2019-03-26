@@ -46,6 +46,7 @@ palabras = [
 	"conspirador",
 	"electricidad",
 	"hielo",
+	"fuego",
 	"blade",
 	"Luci",
 	"panoramas",
@@ -180,9 +181,9 @@ Ahorcado.prototype.trazar = function () {
 		this.vivo = false;
 		var perdio = document.getElementById('perder');
 				if (perdio) {
+					document.body.classList.add('is-fixed');
 					perdio.className = 'final'
-
-					setTimeout(function(){iniciar();}, 5000);
+					setTimeout(function(){iniciar();}, 3000);
 				}
 
 	}
@@ -190,6 +191,7 @@ Ahorcado.prototype.trazar = function () {
 }
 
 function iniciar () {
+	document.body.classList.remove('is-fixed');
 	l = document.getElementById("letra");
 	l.focus();
 	var b = document.getElementById("boton");
@@ -277,9 +279,10 @@ Ahorcado.prototype.ganar = function() {
 			if (adivinadas == espacio.length) {
 				var gano = document.getElementById('ganar');
 				if (gano) {
+					document.body.classList.add('is-fixed');
 					gano.className = 'final'
 				}
-				setTimeout(function(){iniciar();}, 5000);
+				setTimeout(function(){iniciar();}, 3000);
 			};
 	 	}
 	}

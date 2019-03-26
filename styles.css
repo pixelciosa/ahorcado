@@ -1,0 +1,221 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  background-color: #3c9087;
+  background-image: url('images/madera.png');
+  background-repeat: repeat;
+  margin: 0;
+}
+ 
+body.is-fixed {
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 40px 20px;
+}
+
+@media (max-width: 1020px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-height: 660px) {
+  .container {
+    height: auto;
+  }
+}
+
+.sidebar {
+  margin-right: 50px;
+  padding-top: 19px;
+}
+
+@media (max-width: 1020px) {
+  .sidebar {
+    margin-right: 0;
+  }
+}
+
+.title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 65px;
+  letter-spacing: 1px;
+  line-height: 0.5;
+  margin: 0 0 3px 0;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+.subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+  margin: 0 0 30px 0;
+}
+
+@media (max-width: 767px) {
+  .subtitle {
+    font-size: 19px;
+  }
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.resultado div {
+  opacity: 0;
+  background-color: rgba(194, 92, 92, 0.2);
+  pointer-events: none;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#ganar {
+  background-color: rgb(20, 101, 20, 0.5);
+}
+
+#perder {
+  background-color: rgb(193, 66, 66, 0.5);
+}
+
+.final {
+  -webkit-animation: emerge 3s;
+          animation: emerge 3s;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 20px;
+  display: inline-block;
+  border: 4px dotted white;
+  border-radius: 10px;
+}
+
+.input p {
+  display: block;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 0;
+  border-bottom: 4px solid white;  outline: 0;
+  padding: 20px;
+  width: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding-left: 20px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+button {
+  height: 67px;
+  vertical-align: bottom;
+  border: 0;
+  background-color: #90C2E7;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  margin-left: -3px;
+  outline: 0;
+  padding: 0px 10px;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(125, 171, 206);
+}
+
+canvas {
+  width: 100%;
+  border: 4px dotted white;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes emerge {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 58px;
+  }
+}
+
+@keyframes emerge {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 58px;
+  }
+}
